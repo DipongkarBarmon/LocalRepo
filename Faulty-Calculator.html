@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    //   let expration=prompt("Enter the expression..");
+    //  let  numbers=expration.match(/\d+/g).map(Number);
+    // const operators=expration.match(/[+\-*/%]/g)[0];
+     
+    //  let operand1=numbers[0],operand2=numbers[1];
+    //  console.log(expration);
+    //  console.log(numbers);
+    //  console.log(operators);
+    //console.log(typeof(operators));  
+    let operand1=prompt("Enter the First Number:");
+    let operators=prompt("Enter the Operator:");
+    let operand2=prompt("Enter the Second number:");
+    //  console.log(typeof(operand1));
+    // operand1=(Number)(operand1);
+    // operand2=(Number)(operand2);
+    
+     const obj={
+        '+':'-',
+        '*':'+',
+        '-':'/',
+        '/':'**'
+     }
+    
+      let result;
+      let  expectation=Math.random();
+      if(expectation<=0.1){
+        //  if(operators==='+'){
+        //    result=operand1-operand2;
+        //  }
+        //  else if(operators==='-'){
+        //    result=operand1/operand2;
+        //  }
+        //  else if(operators==='*'){
+        //    result=operand1+operand2;
+        //  }
+        //  else if(operators==='/'){
+        //    result=operand1**operand2;
+        //  }
+
+         alert(`The result is: ${eval(`${operand1} ${operators} ${operand2}`)}`);
+      }
+      else{
+        operators=obj[operators];
+           
+        alert(`The result is: ${eval(`${operand1} ${operators} ${operand2}`)}`);
+         
+        // if(operators==='+'){
+        //    result=operand1+operand2;
+        //  }if(operators==='+'){
+        //    result=operand1+operand2;
+        //  }
+        //  else if(operators==='-'){
+        //    result=operand1-operand2;
+        //  }
+        //  else if(operators==='*'){
+        //    result=operand1*operand2;
+        //  }
+        //  else if(operators==='/'){
+        //    result=operand1/operand2;
+        //  }
+        //  else if(operators==='-'){
+        //    result=operand1-operand2;
+        //  }
+        //  else if(operators==='*'){
+        //    result=operand1*operand2;
+        //  }
+        //  else if(operators==='/'){
+        //    result=operand1/operand2;
+        //  }
+      }
+      alert(`The result is: ${result}`);
+      document.getElementById('demo').innerHTML=`The result is: ${result}`; 
+      
+       document.getElementById('demo').style.fontSize='18px';
+    </script>
+</body>
+</html>
